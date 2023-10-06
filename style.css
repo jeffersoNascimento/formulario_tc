@@ -27,8 +27,8 @@
   header {
     position: relative;
     width: 100%;
-    height: 400px;
-    background: var(--green);
+    height: 50%;
+    background: var(--green1);
   }
 
   .header-text {
@@ -145,17 +145,19 @@
   .text1 .text2 {
     display: flex;
     justify-content: center;
+    text-align: center;
   }
 
   h2 {
     display: flex;
     justify-content: center;
-    max-width: 1000px;
-    min-width: 300px;
+    text-align: center;
+    max-width: 100%;
+    min-width: 30%;
     padding: 10px 10px;
     border-radius: 5px;
-    background: var(--green);
-    color: var(--bege);
+    background: var(--bege);
+    color: var(--green);
     font-style: italic;
     margin-top: 20px;
     box-shadow: 0 2px 5px rgb(0, 45, 32);
@@ -168,18 +170,5 @@
     padding: 4px;
   }
 
-  .link {
-    display: flex;
-    justify-content: center;
-    color: var(--bege);
-  }
   
-  section .card-wrapper {
-    max-width: 1000px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-    grid-gap: 30px;
-    padding-top: 20px;
-  }
-  
-
+ 
