@@ -1,174 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
-/* Reset CSS */
+/* Estilos comuns para todos os tamanhos de tela */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  :root {
-    --green1: rgb(95, 125, 34);
-    --green: rgb(0, 45, 32);
-    --bege: rgb(248, 227, 181);
-  }
-  
-  html,
-  body {
-    background: var(--bege);
-    min-width: 100vh;
-    overflow-x: hidden;
-    min-height: 100vh;
-  }
-  
-  /* Header */
-  header {
-    position: relative;
-    width: 100%;
-    height: 50%;
-    background: var(--green1);
-  }
-
-  .header-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
 }
 
-.light-effect {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 10%, transparent 80%);
-    opacity: 0;
-    animation: lightOpacity 2s infinite, lightPass 2s infinite;
-    z-index: 0;
+:root {
+  --green1: rgb(95, 125, 34);
+  --green: rgb(0, 45, 32);
+  --bege: rgb(248, 227, 181);
 }
 
-@keyframes lightPass {
-    0% {
-        transform: translateX(-50%);
-    }
-    100% {
-        transform: translateX(100%);
-    }
+/* Estilos comuns para todos os tamanhos de tela */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@keyframes lightOpacity {
-    0%, 100% {
-        opacity: 0;
-    }
-    5%, 95% {
-        opacity: 1;
-    }
+body {
+  background-color: var(--bege);
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
-  
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--bege);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 45, 32);
+}
+
+.header-block {
+  margin-bottom: 20px;
+}
+
+.header-block img {
+  padding: 30px;
+  max-width: 100%;
+  height: auto;
+}
+
+.text1 h2,
+.text2 h2 {
+  color: var(--green);
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.link {
+  background: var(--green);
+  padding: 5px;
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--bege);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 45, 32);
+}
+
+
+
+/* Estilos para telas pequenas (até 576px) */
+@media (max-width: 576px) {
   .content {
-    max-width: 1000px;
-    min-width: 300px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-  }
-  
-  nav {
-    width: 100%;
-    height: 125px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+      padding: 10px;
   }
 
+  .text1 h2,
+  .text2 h2 {
+      font-size: 16px;
+  }
+}
 
-  .content .header-block {
-    margin-top: 25px;
-    max-width: 1000px;
-    min-width: 300px;
-    height: 320px;
-    background: var(--bege);
-    border-radius: 8px;
-    box-shadow: 1px 0px 10px 0px rgb(0, 45, 32);
-    position: relative;
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    text-align: center;
-  }
-  
-  .header-block img {
-    max-width: 60%;
-    min-width: 30%;
-    height: 60%;
-  }
-  
-  
-  /* Catalog of Products */
-  section .catalog {
-    width: 100vw;
-    padding: 100px;
-  }
-  
-  section .filter-card {
-    width: 980px;
-    height: 150px;
-    background: var(--green1);
-    border-radius: 8px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .search-input {
-    width: 700px;
-    height: 50px;
-    border: none;
-    border-radius: 4px 0px 0px 4px;
-    text-indent: 10px;
-  }
-  
-  .title-wrapper-catalog {
-    margin-top: 10px;
-    padding-bottom: 20px;
-    padding: 10px;
-  }
-
-  .text1 .text2 {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-  }
-
-  h2 {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    max-width: 100%;
-    min-width: 30%;
-    padding: 10px 10px;
-    border-radius: 5px;
-    background: var(--bege);
-    color: var(--green);
-    font-style: italic;
-    margin-top: 20px;
-    box-shadow: 0 2px 5px rgb(0, 45, 32);
-  }
-
-  h2 :hover {
-    background-color: var(--bege);
-    color: var(--green);
-    border-radius: 8px;
-    padding: 4px;
-  }
-
-  
- 
