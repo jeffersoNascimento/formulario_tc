@@ -12,7 +12,7 @@
 :root {
   --green1: rgb(95, 125, 34);
   --green: rgb(0, 45, 32);
-  --bege: rgb(248, 227, 181);
+  --bege: #fff;
 }
 
 /* Estilos comuns para todos os tamanhos de tela */
@@ -30,9 +30,8 @@ body {
 }
 
 .content {
-  max-width: 800px;
+  width: 400px;
   margin: 0 auto;
-  padding: 20px;
   background-color: var(--bege);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 45, 32);
@@ -54,6 +53,7 @@ body {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 20px;
+  padding: 10px;
 }
 
 .link {
@@ -65,7 +65,6 @@ body {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 45, 32);
 }
-
 
 
 /* Estilos para telas pequenas (até 576px) */
